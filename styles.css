@@ -16,7 +16,6 @@
 }
 
 body {
-  overflow-x:hidden;
   max-width:100%;
   margin: 0;
 }
@@ -45,6 +44,14 @@ ul {
   justify-content: center;
   flex-wrap: wrap;
 }
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
 .nav-container {
   font-family: "AWTPageBelgianConds", Fallback, sans-serif;
   font-size: 35px;
@@ -134,7 +141,7 @@ img {
 .p-title {
   font-family: "AWTPageBelgianConds", Fallback, sans-serif;
   font-size: 45px;
-  padding: 1.5rem 0;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
 }
@@ -171,7 +178,7 @@ img {
   font-family: Arial_Narrow_bold;
   color: black;
   font-size: 22px;
-  padding: 0.5rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -182,7 +189,7 @@ img {
 }
 
 .speaker {
-  padding-top: 2rem;
+  padding-top: 3rem;
   font-family: AWTPageBelgianConds;
   font-size: 25px;
   text-align: center;
@@ -226,7 +233,7 @@ img {
 .sidenav {
   font-family: "AWTPageBelgianConds", Fallback, sans-serif;
   height: 0;
-  width:100%;
+  width: 100%;
   position: fixed;
   z-index: 3;
   top: 0;
@@ -252,7 +259,7 @@ img {
     rgba(0, 136, 255, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  width:100%;
+  width: 100%;
   text-align: center;
 }
 .sidenav a {
@@ -346,5 +353,15 @@ img {
   text-align:center
 }
 
-
-html { overflow:auto; }
+@media screen and (min-width: 900px) {
+    .images{
+        padding-top: 60px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .text-container{
+        width: 42%;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
