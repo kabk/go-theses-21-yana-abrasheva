@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "AG_Book_Rounded_Bold";
+  src: url("fonts/AG_Book_Rounded_Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Arial_Narrow_bold";
+  src: url("fonts/Arial\ Narrow\ Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Arial_Narrow";
+  src: url("fonts/Arial\ Narrow.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "AWTPageBelgianConds";
+  src: url("fonts/AWTPageBelgianCond.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+body {
+  max-width:100%;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* -------- Nav ---------*/
+li {
+  list-style-type: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+li:hover {
+  opacity: 0.6;
+}
+li > a {
+  color: black;
+}
+ul {
+  padding: 0;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-container {
+  font-family: "AWTPageBelgianConds", Fallback, sans-serif;
+  font-size: 35px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  background-image: url("./assets/images/forweb/snimkata.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  color: black;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.sub-nav {
+  font-family: "AWTPageBelgianConds", Fallback, sans-serif;
+  position: absolute;
+  top: 45px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #546bd8;
+}
+.sub-nav > span {
+  text-decoration: none;
+  color: black;
+}
+.sub-nav > span > a:visited {
+  color: black;
+}
+/* -------- Swiper ---------*/
+.swiper-container {
+  width: 100%;
+  height: 85vh;
+  cursor: pointer;
+}
+.fit {
+  object-fit: contain;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.6;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+}
+.image-title {
+  font-size: 25px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+------
+*/
+.thesis {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.title {
+  font-family: "AWTPageBelgianConds", Fallback, sans-serif;
+  font-size: 45px;
+}
+.link {
+  font-family: "AG_Book_Rounded_Bold";
+  padding-top: 0.5rem;
+  font-size: 24px;
+  display: block;
+  text-decoration: none;
+  color: blue;
+}
+.link:hover {
+  opacity: 0.6;
+}
+
+/* -------- Abstract ---------*/
+.p-title {
+  font-family: "AWTPageBelgianConds", Fallback, sans-serif;
+  font-size: 45px;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.text-container {
+  font-family: Arial_Narrow;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.text-container > p {
+  margin-top: 0;
+}
+.image-container {
+  display: flex;
+  margin: 0 auto;
+  width: 60vw;
+  max-width: 900px;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+.text-image {
+  width: 35vw;
+  height: 90%;
+  max-height: 950px;
+  object-fit: contain;
+}
+
+.image-title-horizontal {
+  padding-left: 2rem;
+  font-family: AG_Book_Rounded_Bold;
+}
+
+/* Exposition*/
+.part {
+  font-family: Arial_Narrow_bold;
+  color: black;
+  font-size: 22px;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.setting {
+  font-family: Arial_Narrow;
+  color: blue;
+  text-align: center;
+}
+
+.speaker {
+  padding-top: 3rem;
+  font-family: AWTPageBelgianConds;
+  font-size: 25px;
+  text-align: center;
+}
+.ttt {
+  padding: 0;
+}
+
+/* Tooltip */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 520px;
+  background-color: black;
+  color: red;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.sidenav {
+  font-family: "AWTPageBelgianConds", Fallback, sans-serif;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: rgb(0, 136, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 136, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 0px;
+  text-align: center;
+  overflow-y: scroll;
+}
+.open-sidenav {
+  position: fixed;
+  top: 0;
+  background: rgb(0, 136, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 136, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 100%;
+  text-align: center;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .swiper-container {
+    height: 70vh;
+    padding-bottom: 3rem;
+  }
+
+  .thesis {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .content {
+    margin: 1.5rem;
+  }
+  ul {
+    position: static;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+    max-width: 100%;
+    margin: 0 1.2rem;
+  }
+  .nav {
+    justify-content: center;
+    padding: 0;
+  }
+  .text-container {
+    max-width: 500px;
+  }
+  .sub-nav {
+    top: 90px;
+  }
+
+  .tooltip:active .tooltiptext {
+    visibility: visible;
+  }
+  .image-container {
+    width: 100%;
+    height: 30rem;
+  }
+  .image-container> div{
+    width:100%;
+    flex-shrink:0;
+    height:100%:
+  }
+  .text-image {
+    width:100%;
+    height: 100vw;
+  }
+  .image-title-horizontal {
+    font-size: 10px;
+  }
+}
+
+.pdf{
+  padding-top:1rem;
+  text-align:center
+}
