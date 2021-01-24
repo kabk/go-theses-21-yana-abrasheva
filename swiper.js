@@ -1,6 +1,7 @@
 import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  change();
   loadSlides();
   const mySwiper = new Swiper(".swiper-container", {
     direction: "horizontal",
@@ -14,10 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         nextSlide();
       },
     },
-    autoplay: {
-      delay: 1000,
-    },
-
+    // autoplay: {
+    //   delay: 1000,
+    // },
   });
   const nextSlide = () => mySwiper.slideNext();
 });
@@ -65,9 +65,21 @@ function loadSlides() {
   });
 }
 
-// function changeImageTitle() {
-//   const slide = document.getElementsByClassName("swiper-slide-active");
-//   const title = slide[0].children[0].src.split("/").pop().replace(".png", "");
-//   const titleEl = document.getElementById("image-title");
-//   titleEl.innerText = title;
-// }
+const text = [
+  "Three species",
+  "On a Journey",
+  "Curration <-> Dialogues",
+  "Learning to Unlearn",
+];
+let counter = 0;
+const elem = document.getElementById("titles");
+const inst = setInterval(change, 1000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
