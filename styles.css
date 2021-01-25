@@ -18,7 +18,7 @@
 body {
   max-width:100%;
   margin: 0;
-  
+
 }
 a {
   text-decoration: none;
@@ -213,7 +213,7 @@ img {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 400px;
+  width: 200px;
   background-color: black;
   color: red;
   text-align: center;
