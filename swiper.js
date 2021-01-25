@@ -68,7 +68,7 @@ function loadSlides() {
 const text = [
   "Three species",
   "On a Journey",
-  "Through Curration and Dialogues",
+  "Curration and Dialogues",
   "Learning to Unlearn",
 ];
 let counter = 0;
